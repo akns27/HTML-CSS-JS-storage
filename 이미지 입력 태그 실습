@@ -1,0 +1,3 @@
+	<a href = "http://www.kmooc.kr/" target = _blank> <!--새창으로 링크 연결-->
+		<img src = "./images/kmooc.png" height = "200px"> <!--그림 입력-->
+</a>
