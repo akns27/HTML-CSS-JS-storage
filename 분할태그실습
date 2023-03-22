@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+</head>
+<body>
+	<div style="background-color:yellow">div 태그는 블록태그 : 한줄차지</div>
+	<span style="background-color:orange">span 인라인 태그 : 내용만큼 차지</span>
+	<a href="Https://www.daum.net">a 인라인 태그</a><br>
+	<h4 style="color : red; background-corlor : pink">h4 태그는 블록 태그 : 한줄 차지</h4>
+    
+</body>
