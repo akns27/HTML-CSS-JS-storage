@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+</head>
+<body>
+	<div style="height : 800px">
+	<div style="background-color:skyblue; height : 20%">
+		<h1>헤더 부분 블록 div</h1>
+		</div>
+		<div style="background-color:yellow; height : 60%">
+			<h1>섹션 1 블록</h1>
+</div>
+		<span style="background-color:orange">span 인라인 태그</span>
+		<a href="Https://www.daum.net">a 인라인 태그</a>
+	<div style="background-color : gray ; height : 10%">
+		<h1>아티클 블록</h1>
+		</div>
+	<div style="background-color : pink ; height : 10%">
+		<h1>푸터 블록</h1>
+		</div>
+	</div>
+		
+    
+</body>
+</html>
