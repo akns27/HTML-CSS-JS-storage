@@ -1,0 +1,26 @@
+<head>
+	<style>
+		h1 {
+			display: inline-block;
+			background-color:black;
+			color:white;
+			font-size:1.5em;
+			padding:10px;
+		}
+		ul {
+			list-style:none;
+		}
+		li{
+			color:blue;
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>웹 기술-기본</h1>
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript 기초</li>
+	</ul>
+</body>
