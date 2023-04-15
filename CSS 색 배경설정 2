@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>배경 이미지</title>
+		<style>
+			
+			div {
+				width : 400px;
+				height : 250px;
+				padding : 20px;
+				border : 20px solid rgba(100,100,100,0.493);
+				margin-bottom:20px;
+				overflow:auto;
+				background-image: url('images/bg3.png');
+				background-repeat:no-repeat;
+				background-position:right top;
+			}
+			#bg1
+			{
+				background-origin:padding-box;
+			}
+			#bg2
+			{
+				background-origin:border-box;
+			}
+			#bg3
+			{
+				background-origin:content-box;
+			}
+		</style>
+	<head>
+	<body>
+		<div id="bg1">
+			<h2>backgroun-origin</h2>
+			<h3>패딩까지 배경 이미지 표시</h3>
+			<p>background-origin : padding-box</p>
+		</div>
+	<div id="bg2">
+			<h2>backgroun-origin</h2>
+			<h3>테두리까지 배경 이미지 표시</h3>
+			<p>background-origin : border-box</p>
+		</div>
+<div id="bg3">
+			<h2>backgroun-origin</h2>
+			<h3>내용 영역에만 배경 이미지 표시</h3>
+			<p>background-origin :content-box</p>
+		</div>
+	</body>
+</html>
