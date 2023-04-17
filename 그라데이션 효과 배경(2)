@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>선형 그라데이션</title>
+      <style>
+      li{
+        display: inline-block;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+      } 
+      .radial1{
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+
+        background: blue;
+        background: radial-gradient(circle at 20% 20%,white,blue);
+      }
+      .repeat1{
+        background: red;
+        background: repeating-linear-gradient(yellow, red 20px);
+      }
+      .repeat2 {
+        background: #ccc;
+        background: repeating-linear-gradient(circle, white,#ccc 10%);
+      }
+     
+      </style>
+    </head>
+<body>
+    <h3>1. 위치키워드를 사용한 원형 그러데이션 만들기</h3>
+<div class="radial1"</div>
+    <h3>그러데이션 반복하기</h3>
+<ul>
+    <li class="repeat1"></li>
+    <li class="repeat2"></li>
+</ul>
+</body>
+</html>
