@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>.acc{
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding:18px;
+	width: 100%;
+	border:none;
+	text-align: left;
+	outline : none;
+	font-size: 15px;
+	transition:0.4s;
+		}
+		
+		.active, acc:hover{
+			background-color: lightblue;
+		}
+		
+		.content{
+			padding: 0 18px;
+			display: none;
+			background-color:white;
+			overflow:hidden;
+		}
+	</style>
+  </head> 
+  <body>  
+		<button class = "acc" onclick="show()">section1</button>
+		<div class = "content">
+			<p>섹션 1의 내용</p>
+		</div>
+
+        <button class = "acc" onclick="show()">section2</button>
+		<div class = "content">
+			<p>섹션 1의 내용</p>
+		</div>
+
+        <button class = "acc" onclick="show()">section3</button>
+		<div class = "content">
+			<p>섹션 1의 내용</p>
+		</div>
+
+		<script>
+            let acc = document.getElementsByClassName("acc");//배열, classname은 배열이 따라옴
+            let acc2 = document.querySelectorAll(".acc"); //위 코드와 같은 역활을 함
+            let content = document.getElementsByClassName("content");//배열이 따라옴
+            // let content2 = document.querySelectorAll(".content"); //위 코드와 같은 역활을 함
+            // //쿼리 셀럭터도 써보기 펑션에 쓰면 됨
+            function show(i) {
+               
+                acc[i].classList.toggle("active");//배열이라서 첫번째 단추(=[0])를 꼭 집어줘야함
+                if(content[i].style.display == "block"){
+                    content[i].style.display = "none";
+                }
+                else{
+                    content[i].style.display = "block";
+                }
+            
+            }
+
+            function show2(acc){
+                let pan = acc.nextElementsibling;
+                pan.classList.toggle("active");
+                if(pan.style.display == "block"){
+                    pan.style.display = "none";
+                }
+                else{
+                    pan.style.display = "block";
+                }
+            }
+            
+            
+		</script>
+  </body>
+
+</html>
