@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+        #key{
+      width:400px;
+      height:100px;
+      border : 1px solid dodgerblue;
+    }
+    #down{color:blue;}
+    #up{color:red;}
+  </style>
+</head>
+<body>
+    <!-- <div class="parent">
+        <button id="btn1">button 1</button>
+        <button id="btn2">button 2</button>
+    </div> -->
+  <h3 id="idh3">1. 키 이벤트 속성 문제 : 눌러진 key가 div영역에  나타나도록 하시오.</h3>
+ <div id="key"></div>
+ <hr>
+  <textarea cols="30" rows="3" autofocus></textarea>
+  <hr>
+  <button id="id1">클릭</button><br><br>
+  <button id ="id2">클릭</button><br><br>
+  <button id ="id3">클릭</button><br><br>
+    <script>
+    // let parent = document.querySelector('.parent'); //div요소 저장
+    // parent.addEventListener('click', getEventTarget); //이벤트 리스너
+
+    // //javascript
+    // function getEventTarget(e){
+    //     console.log(e);
+    //     console.log(e.target); 
+    //     console.log(e.currentTarget); 
+    //     console.log(this); 
+    //     console.log(e.currentTarget === this); //true
+    // }
+
+    //step1
+    const keyDiv = document.getElementById("key");
+    const msgH3 = document.getElementById('idh3');
+    document.addEventListener('keydown', function(e){
+        console.log(e);
+        keyDiv.innerHTML = `<h1 id='down'> keydown : ${e.key}</h1>`
+    });
+    document.addEventListener('keyup', function(eventobj){
+        keyDiv .innnerHTML = `<h1 id='up'> keyup : ${eventobj.code}</h1?`
+    });
+    
+    //step2
+    const textArea = document.querySelector("textarea");
+    textArea.addEventListener('keyup', function(){
+        msgH3.innerHTML = `글자수:${textArea.value.length}`;
+    });
+      
+  </script>
+ </body>
+</html>
