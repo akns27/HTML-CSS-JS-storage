@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>연습문제 2</title>
+    <style>
+			#container {
+  width:600px;
+  margin:10px auto;
+}
+fieldset {
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin:10px;
+}
+
+/* label 텍스트 스타일 */
+li label {
+  width:120px;
+  line-height: 36px;
+  float:left;
+  font-weight:bold;
+}
+
+/* 텍스트 필드 스타일 */
+input[type="text"], input[type="password"], input[type="email"] {
+  width:300px;
+  height:30px;
+}
+/* 버튼 스타일 */
+#buttons {
+  width:400px;
+  margin:20px auto;
+  text-align: center;
+}
+#buttons input {
+  width:150px;
+  height:50px;
+  font-size:20px;
+}
+#buttons input:hover {
+  background-color:rgb(27, 134, 221);
+  color:#fff;
+  border-color:#fff;
+}
+
+/* 드롭다운 메뉴 스타일 */
+select {
+  width:100px;
+  height:30px;
+}
+    </style>
+  </head>
+  <body>
+		<div id="container">
+			<h1>프론트엔드 개발자 지원서 </h1>
+			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+			<hr>
+			<form name="frm1">
+        <fieldset>
+          <ul>
+          <li>
+          <label for = "uid">아이디</label>
+          <input type="text" id = "uid" autofocus placeholder="4~10자 사이, 공백없이" required>
+        </li>
+        <li>
+          <label for = "uemail">이메일</label>
+          <input type="email" id = "uemail" required>
+        </li>
+        <li>
+          <label for = "upassword">비밀번호</label>
+          <input type="password" id = "upwd" placeholder="문자와 숫자, 특수기호 포함" required>
+        </li>
+        <li>
+          <label for ="path">가입 경로</label>
+          <select id = "path">
+            <option value = "blog">블로그</option>
+            <option value="serch">검색</option>
+            <option value="sns">sns</option>
+            <option value="etc">기타</option>
+          </select>
+          </li>
+          <li>
+           <label for ="path">회원 등급</label>
+          <select id = "class" name="class" onchange="calculating()">
+            <option value = "100">초급</option>
+            <option value="200">중급</option>
+            <option value="300">고급</option>
+          </select>
+        </li>
+        <li>
+          <label for = "tuition">연회비</label>
+          <input type="text" id = "tuition" name="tuition">
+        </li>
+        <li>
+          <label for = "memo">메모</label>
+          <textarea cols="40" rows="4" placeholder="남기실 말씀은 여기에"></textarea>
+        </li>
+      </ul>
+        </fieldset>
+        <fieldset>
+          <legend>이벤트와 새로운 소식</legend>
+          <input type="radio" name ="mailing" id="mailing_y">
+          <label for="mailing_y">메일 수신</label>
+          <input type="radio" name ="mailing" id="mailing_n" checked>
+          <label for="mailing_n">메일 수신 안 함</label>
+        </fieldset>
+        <div id ="buttons">
+          <input type="button" value="가입하기" onclick="showing()">
+          <input type="reset" value="취소">
+        </div>
+			</form>
+
+      <form name="frm2" id="confirm">
+        <fieldset>
+          <ul>
+          <li>
+          <label for = "uid">아이디</label>
+          <input type="text" id = "uid">
+        </li>
+        <li>
+          <label for = "uemail">이메일</label>
+          <input type="email" id = "uemail" >
+        </li>
+        <li>
+          <label for ="path">가입 경로</label>
+          <select id = "path">
+            <option value = "blog">블로그</option>
+            <option value="serch">검색</option>
+            <option value="sns">sns</option>
+            <option value="etc">기타</option>
+          </select>
+          </li>
+
+		</div>
+    <script>
+      let userId =document.getElementById("uid");
+      let userPassword =document.getElementById("upwd");
+
+      function checking(){
+            if(userId.value==""){
+                alert("아이디를 입력하세요")
+                userId.focus();
+                return false;
+            }
+            if(userPassword.value==""){
+                alert("비밀번호를 입력하세요")
+                userPassword.focus();
+                return false;
+            }
+					if (userId.value.length > 8) {
+            alert("아이디가 여덟자리 초과입니다!");
+            userId.focus();
+            return false;
+          }
+        }
+    function calculating(){
+      frm1.tuition.value = parseInt(frm1.class.value)*50+"원";
+      //frm1.titution.value = parseInt(this.value)*50+"원";//내가 선택한 그 객체
+    }
+    function showing(){
+      frm2.uid.value = frm1.uid.value
+      frm2.uemail.value = frm1.uemail.value
+      frm2.path.value = frm1.path.value
+    }
+    </script>
+  </body>
+</html>
