@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Document</title>
+    <style>
+        .button{
+					margin: auto;
+			}
+        #container{
+            width:100%;
+            background-color:#ddd;
+        }
+        #pbar{
+            width: 0;
+            height: 30px;
+            line-height:30px;
+            background-color: #8c9cec;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="pbar"></div>
+    </div>
+    <br>
+   <button class="button" onclick="start()">progress</button>
+
+<!-- 	 100밀리초 마다 상태표시줄이 1%  씩 증가하도록 코드를 작성해 보자. -->
+	<script>
+		let i=0;
+		function start(){
+			if(i==0){
+				let pbarDiv = document.getElementById("pbar");
+				let pbarWidth = 0;
+				let id = setInterval(frame, 100);
+			}
+			function frame(){
+				if(pbarWidth >= 100){
+					clearInterval(id);
+					i=0;
+				}
+				else{
+					pbarWidth++;
+					pbarDiv.style.width = pbarWidth + "%";
+					pbarDiv.innerHTML = pbarWidth + "%";
+				}
+			}
+		}
+	</script>
+
+</body>
